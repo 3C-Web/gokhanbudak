@@ -40,16 +40,25 @@
     .card{ width:min(92vw,520px); padding:24px; text-align:center }
     .logo{ width:160px; height:auto; margin:0 auto 18px; display:block }
 
-    h1{ margin:0; font-size:1.9rem; font-weight:700; color:var(--anthrazit); letter-spacing:.2px }
-    
-    /* Align role with start of H1 text */
+    h1{
+      margin:0;
+      font-size:1.9rem;
+      font-weight:700;
+      color:var(--anthrazit);
+      letter-spacing:.2px;
+    }
+
+    /* Geschäftsführer aligned with H1, closer spacing */
     .role{
-      margin:6px 0 18px;
+      margin:2px 0 12px; /* moved up */
       font-size:1.05rem;
       font-weight:500;
       color:#374151;
-      text-align:left;       /* left align */
-      display:inline-block;  /* so it aligns with h1 block */
+      text-align:left;
+      width:fit-content;
+      margin-left:auto;
+      margin-right:auto;
+      transform:translateX(-25%); /* adjust left alignment */
     }
 
     .grid{ display:grid; gap:12px; margin-top:8px }
@@ -76,7 +85,7 @@
     <div class="grid">
       <!-- Phone -->
       <a class="btn" href="tel:+491704694340">
-        <span class="ico">📞</span><span class="txt">0170 469 4340</span>
+        <span class="ico">📞</span><span class="txt">+49 170 469 4340</span>
       </a>
       <!-- Email -->
       <a class="btn" href="mailto:info@3c-ulm.de">
