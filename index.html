@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Gökhan Budak – Car Competence Center</title>
   <style>
+    /* Load Montserrat locally */
+    @font-face {
+      font-family: "Montserrat";
+      src: url("Montserrat-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: 100 900; /* variable range */
+      font-display: swap;
+    }
+
     :root{
       --bg:#ffffff;
       --fg:#1f2328;
@@ -17,17 +25,26 @@
       --radius:16px;
       --anthrazit:#2F2F2F;
     }
+
     *{box-sizing:border-box}
+
     body{
-      margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
-      background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      margin:0; min-height:100vh;
+      display:flex; align-items:center; justify-content:center;
+      background:var(--bg); color:var(--fg);
+      font-family:"Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-weight:400;
+      line-height:1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+
     .card{ width:min(92vw,520px); padding:24px; text-align:center }
     .logo{ width:160px; height:auto; margin:0 auto 18px; display:block }
 
-    h1{ margin:0; font-size:1.8rem; font-weight:800; color:var(--anthrazit) }
-    .role{ margin:2px 0 8px; font-size:1rem; font-weight:600; color:#374151 }
-    .company{ margin:0 0 18px; font-size:1.05rem; color:var(--muted); font-weight:600 }
+    h1{ margin:0; font-size:1.9rem; font-weight:700; color:var(--anthrazit); letter-spacing:.2px }
+    .role{ margin:4px 0 8px; font-size:1.05rem; font-weight:600; color:#374151 }
+    .company{ margin:0 0 18px; font-size:1.05rem; color:var(--muted); font-weight:500 }
 
     .grid{ display:grid; gap:12px; margin-top:8px }
     .btn{
@@ -35,12 +52,13 @@
       padding:14px 16px; border-radius:var(--radius);
       background:var(--btn); border:1px solid var(--btn-border);
       text-decoration:none; color:var(--fg); box-shadow:var(--shadow);
-      transition:background .15s ease, transform .04s ease;
+      transition:background .15s ease, transform .04s ease, border-color .15s ease;
+      font-weight:500;
     }
-    .btn:hover{ background:var(--btn-hover) }
+    .btn:hover{ background:var(--btn-hover); border-color:#dfe3e8 }
     .btn:active{ transform:translateY(1px) }
-    .ico{ width:22px; height:22px; display:grid; place-items:center }
-    .txt{ font-size:1.02rem; font-weight:600 }
+    .ico{ width:22px; height:22px; display:grid; place-items:center; font-size:1.1rem }
+    .txt{ font-size:1.02rem; font-weight:600; font-variant-numeric:tabular-nums }
   </style>
 </head>
 <body>
@@ -63,7 +81,7 @@
       <a class="btn" href="https://3c-ulm.de/" target="_blank" rel="noopener">
         <span class="ico">🌐</span><span class="txt">https://3c-ulm.de/</span>
       </a>
-      <!-- Address (Google Maps) -->
+      <!-- Address -->
       <a class="btn" href="https://maps.google.com/?q=Graf-Arco-Stra%C3%9Fe%204%2C%2089079%20Ulm%20Donautal" target="_blank" rel="noopener">
         <span class="ico">📍</span><span class="txt">Graf-Arco-Straße 4, 89079 Ulm Donautal</span>
       </a>
