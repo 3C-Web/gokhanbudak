@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Gökhan Budak – Car Competence Center</title>
   <style>
-    /* Load Montserrat locally */
     @font-face {
       font-family: "Montserrat";
       src: url("Montserrat-VariableFont_wght.ttf") format("truetype-variations");
-      font-weight: 100 900; /* variable range */
+      font-weight: 100 900;
       font-display: swap;
     }
 
@@ -20,7 +19,6 @@
       --btn:#ffffff;
       --btn-border:#e5e7eb;
       --btn-hover:#f8fafc;
-      --accent:#2563eb;
       --shadow:0 8px 24px rgba(0,0,0,.06);
       --radius:16px;
       --anthrazit:#2F2F2F;
@@ -43,8 +41,16 @@
     .logo{ width:160px; height:auto; margin:0 auto 18px; display:block }
 
     h1{ margin:0; font-size:1.9rem; font-weight:700; color:var(--anthrazit); letter-spacing:.2px }
-    .role{ margin:4px 0 8px; font-size:1.05rem; font-weight:600; color:#374151 }
-    .company{ margin:0 0 18px; font-size:1.05rem; color:var(--muted); font-weight:500 }
+    
+    /* Align role with start of H1 text */
+    .role{
+      margin:6px 0 18px;
+      font-size:1.05rem;
+      font-weight:500;
+      color:#374151;
+      text-align:left;       /* left align */
+      display:inline-block;  /* so it aligns with h1 block */
+    }
 
     .grid{ display:grid; gap:12px; margin-top:8px }
     .btn{
@@ -66,7 +72,6 @@
     <img src="logo.png" alt="Logo Car Competence Center" class="logo" />
     <h1>Gökhan Budak</h1>
     <div class="role">Geschäftsführer</div>
-    <div class="company">Car Competence Center</div>
 
     <div class="grid">
       <!-- Phone -->
@@ -79,11 +84,7 @@
       </a>
       <!-- Website -->
       <a class="btn" href="https://3c-ulm.de/" target="_blank" rel="noopener">
-        <span class="ico">🌐</span><span class="txt">https://3c-ulm.de/</span>
-      </a>
-      <!-- Address -->
-      <a class="btn" href="https://maps.google.com/?q=Graf-Arco-Stra%C3%9Fe%204%2C%2089079%20Ulm%20Donautal" target="_blank" rel="noopener">
-        <span class="ico">📍</span><span class="txt">Graf-Arco-Straße 4, 89079 Ulm Donautal</span>
+        <span class="ico">🌐</span><span class="txt">3c-ulm.de</span>
       </a>
     </div>
   </main>
